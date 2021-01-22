@@ -1,0 +1,80 @@
+
+<html>
+<head>
+    <style>
+    
+    .rectangle {
+        border: 1px solid #FF0000;
+        position: absolute;
+    }
+	
+	* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  height:100%;
+  padding: 10px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+	
+    </style>
+</head>
+<body>
+
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    
+	<div id="canvas">
+	
+	<img src="image.png" height="100%" width="100%" /> 
+	
+	</div>
+	
+	
+  </div>
+  
+  <div class="column" style="background-color:#bbb;">
+    
+	<button type="button" onclick="destroy()">Refresh</button>
+	
+  </div>
+</div>
+
+
+<!--
+    <div id="canvas">
+	
+	<img src="image.png" height="100%" width="50%" /> 
+	</div>
+	
+	<button onclick="destroy()">
+	
+	-->
+    <script src="selectArea.js"></script>
+    <script>
+        selectArea(document.getElementById('canvas'));
+		
+		
+		
+		
+    </script>
+</body>
+</html>
